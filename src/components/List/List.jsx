@@ -4,7 +4,7 @@ import Card from "../Card/Card";
 import useFetch from "../../hooks/useFetch";
 
 const List = ({ catId }) => {
-  const { data, loading, error } = useFetch(
+  const { data, loading } = useFetch(
     `/products?populate=*&[filters][categories][id]=${catId}`
   );
 

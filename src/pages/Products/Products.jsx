@@ -6,7 +6,7 @@ import "./Products.scss";
 
 const Products = () => {
   const catId = parseInt(useParams().id)
-  const {data,loading,error} = useFetch(`/sub-categories?[filters][categories][id][$eq]=${catId}`)
+  const {data} = useFetch(`/sub-categories?[filters][categories][id][$eq]=${catId}`)
 
   console.log(data)
   return (
